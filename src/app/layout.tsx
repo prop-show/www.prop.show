@@ -1,9 +1,9 @@
+import Footer from "@/components/Footer"
+import DotGrid from "@/components/react-bits/DotGrid"
+import { ThemeProvider } from "@/components/theme-provider"
 import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import "./globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
-import Head from "next/head"
-import Footer from "@/components/Footer"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,8 +31,21 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark" style={{ colorScheme: "dark" }}>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <div className="fixed top-0 left-0 w-screen h-screen -z-10">
+          <DotGrid
+            dotSize={5}
+            gap={15}
+            baseColor="#ffffFF20"
+            activeColor="#ffffff90"
+            proximity={60}
+            shockRadius={250}
+            shockStrength={5}
+            resistance={750}
+            returnDuration={1.5}
+          />
+        </div>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          <main className="container mx-auto">
+          <main className="container mx-auto ">
             {children}
 
             <Footer />
