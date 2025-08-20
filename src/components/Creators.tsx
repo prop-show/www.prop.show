@@ -1,7 +1,4 @@
-import { IconLetterXSmall, IconLink } from "@tabler/icons-react"
-import Image from "next/image"
-import Link from "next/link"
-import React from "react"
+import { IconLetterXSmall } from "@tabler/icons-react"
 import Creator, { type CreatorProp } from "./Creator"
 
 const creators: CreatorProp[] = [

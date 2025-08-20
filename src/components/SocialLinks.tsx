@@ -1,10 +1,4 @@
-import {
-  IconBrandBilibili,
-  IconBrandGithub,
-  IconBrandTiktok,
-  IconBrandYoutube,
-  IconPointerFilled,
-} from "@tabler/icons-react"
+import { IconBrandBilibili, IconBrandGithub, IconBrandYoutube, IconPointerFilled } from "@tabler/icons-react"
 import { SocialLink } from "./SocialLink"
 import { Alert, AlertDescription, AlertTitle } from "./ui/alert"
 

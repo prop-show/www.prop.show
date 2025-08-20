@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer>
       <section className="flex items-center">
-        <Logo size={80} />
+        <Logo size={60} />
         <section>
           <div className="font-black text-5xl">prop.show</div>
           <p className="font-bold mt-1">为你传递前端开发的核心属性</p>
