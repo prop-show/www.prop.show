@@ -1,5 +1,4 @@
-"use client"
-
+import NavLinkButton, { NavLink } from "./NavLinkButton"
 import {
   IconArmchair2,
   IconBrandAsana,
@@ -10,14 +9,12 @@ import {
   IconNews,
 } from "@tabler/icons-react"
 import Link from "next/link"
-import { usePathname } from "next/navigation"
 import React from "react"
 import { Logo } from "./logo"
-import { Button } from "./ui/button"
 
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 
-const links: { href: string; title: string; icon: React.ReactElement }[] = [
+const links: NavLink[] = [
   { href: "/", title: "首页", icon: <IconArmchair2 /> },
   { href: "/shows", title: "节目单", icon: <IconBroadcast /> },
   { href: "/videos", title: "视频", icon: <IconDeviceTv /> },
@@ -27,14 +24,6 @@ const links: { href: string; title: string; icon: React.ReactElement }[] = [
 ]
 
 export default function Header() {
-  const pathname = usePathname()
-
-  const isActiveLink = (href: string) => {
-    if (pathname === href) return true
-    // 对于子路径匹配，比如 /videos/xxx 匹配 /videos
-    return pathname.startsWith(href + "/")
-  }
-
   return (
     <header className="flex justify-between items-center py-5 px-4 md:px-0">
       <Link href="/" className="hidden md:block">
@@ -48,13 +37,8 @@ export default function Header() {
       </Link>
 
       <aside className="justify-end flex-1 hidden md:flex">
-        {links.map((link) => (
-          <Button asChild variant={isActiveLink(link.href) ? "default" : "ghost"} key={link.href}>
-            <Link href={link.href}>
-              {link.icon}
-              {link.title}
-            </Link>
-          </Button>
+        {links.map(({ href, icon, title }) => (
+          <NavLinkButton key={href} href={href} title={title} icon={icon} />
         ))}
       </aside>
 
@@ -78,18 +62,8 @@ export default function Header() {
               </SheetTitle>
             </SheetHeader>
             <main className="mx-2 flex flex-col items-start">
-              {links.map((link) => (
-                <Button
-                  className="justify-start w-full"
-                  asChild
-                  variant={isActiveLink(link.href) ? "default" : "ghost"}
-                  key={link.href}
-                >
-                  <Link href={link.href}>
-                    {link.icon}
-                    {link.title}
-                  </Link>
-                </Button>
+              {links.map(({ href, title, icon }) => (
+                <NavLinkButton className="justify-start w-full" key={href} href={href} title={title} icon={icon} />
               ))}
             </main>
           </SheetContent>
