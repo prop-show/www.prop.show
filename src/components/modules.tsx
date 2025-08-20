@@ -33,7 +33,7 @@ export default function Modules() {
 
       <Card>
         <CardHeader>
-          <CardTitle>闲聊</CardTitle>
+          <CardTitle>闲聊 Prop</CardTitle>
           <CardDescription>说说其他的</CardDescription>
         </CardHeader>
         <CardContent>
