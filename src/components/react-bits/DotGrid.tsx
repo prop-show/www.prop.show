@@ -3,6 +3,7 @@
 import React, { useRef, useEffect, useCallback, useMemo } from "react"
 import { gsap } from "gsap"
 import { InertiaPlugin } from "gsap/InertiaPlugin"
+import { useTheme } from "next-themes"
 
 gsap.registerPlugin(InertiaPlugin)
 
@@ -278,6 +279,11 @@ const DotGrid: React.FC<DotGridProps> = ({
       window.removeEventListener("click", onClick)
     }
   }, [maxSpeed, speedTrigger, proximity, resistance, returnDuration, shockRadius, shockStrength])
+
+  const { setTheme } = useTheme()
+  useEffect(() => {
+    setTheme("dark")
+  })
 
   return (
     <section className={`p-4 flex items-center justify-center h-full w-full relative ${className}`} style={style}>

@@ -1,4 +1,3 @@
-import NavLinkButton, { NavLink } from "./NavLinkButton"
 import {
   IconArmchair2,
   IconBrandAsana,
@@ -9,8 +8,8 @@ import {
   IconNews,
 } from "@tabler/icons-react"
 import Link from "next/link"
-import React from "react"
 import { Logo } from "./logo"
+import NavLinkButton, { NavLink } from "./NavLinkButton"
 
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 
