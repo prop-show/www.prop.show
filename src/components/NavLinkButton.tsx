@@ -22,7 +22,12 @@ export default function NavLinkButton({ href, title, icon, className }: NavLink 
   }
   return (
     <Button asChild variant={isActiveLink(href) ? "default" : "ghost"} className={cn(className)}>
-      <Link href={href}>
+      <Link
+        href={{
+          pathname: href,
+        }}
+        className="flex items-center gap-2"
+      >
         {icon}
 
         {title}

@@ -19,7 +19,13 @@ export default function Creator({ avatar, creator, href }: CreatorProp) {
         alt="whbbit-avatar"
         className="size-[40px] rounded-full object-cover"
       />
-      <Link href={href} target="_black" className="flex items-center gap-1 border-b-1 border-primary">
+      <Link
+        href={{
+          pathname: href,
+        }}
+        target="_blank"
+        className="flex items-center gap-1 border-b-1 border-primary"
+      >
         <IconLink />
         <span className="font-black text-xl ">{creator}</span>
       </Link>

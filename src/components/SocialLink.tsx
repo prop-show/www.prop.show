@@ -10,7 +10,12 @@ interface SocialLinkProps {
 export function SocialLink({ href, platform, children }: SocialLinkProps) {
   return (
     <Button asChild variant={"secondary"}>
-      <Link href={href} target="_blank">
+      <Link
+        href={{
+          pathname: href,
+        }}
+        target="_blank"
+      >
         {children}
 
         {platform}
