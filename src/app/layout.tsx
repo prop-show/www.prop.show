@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     "前端框架",
     "Web开发",
   ],
-  authors: [{ name: "prop.show 团队" }],
+  authors: [{ name: "prop.show 团队" }, { name: "月空人 @Whbbit1999 @月空人" }],
   creator: "prop.show",
   publisher: "prop.show",
   category: "Technology",
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
       "prop.show 为你传递前端开发的核心属性。包含 Node.js 后台 API 开发，前端页面开发，系统设计，新库推荐，框架解析等内容。",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "https://prop.show/api/og",
         width: 1200,
         height: 630,
         alt: "prop.show - 前端开发播客与教程",
@@ -79,7 +79,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "prop.show - 前端开发播客与教程",
     description: "prop.show 为你传递前端开发的核心属性。前端开发教程、播客与资源分享。",
-    images: ["/twitter-image.jpg"],
+    images: ["https://prop.show/api/og"],
     creator: "@propshow",
     site: "@propshow",
   },
@@ -92,7 +92,7 @@ export const metadata: Metadata = {
     canonical: "https://prop.show",
     languages: {
       "zh-CN": "https://prop.show",
-      en: "https://en.prop.show",
+      en: "https://prop.show",
     },
   },
   icons: {
