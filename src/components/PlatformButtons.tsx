@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button"
 import { VideoPlatform } from "@/types/video"
 import { IconBrandBilibili, IconBrandTiktokFilled, IconBrandYoutubeFilled, IconExternalLink } from "@tabler/icons-react"
 import Link from "next/link"
-import { UrlObject } from "url"
 
 const platformInfo = {
   bilibili: {
@@ -49,7 +48,13 @@ export function PlatformButtons({ platforms }: PlatformButtonsProps) {
               className={` text-white flex items-center gap-2`}
               asChild
             >
-              <Link href={url} target="_blank" rel="noopener noreferrer">
+              <Link
+                href={{
+                  pathname: url,
+                }}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <span>{info.icon}</span>
                 <span>{info.name}</span>
                 <IconExternalLink className="w-3 h-3" />
