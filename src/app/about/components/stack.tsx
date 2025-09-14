@@ -25,7 +25,12 @@ export default function Stack() {
           <div className="flex flex-wrap gap-2 mb-4">
             {stacks.map((stack) => (
               <Badge key={stack.name} variant="secondary" asChild>
-                <Link href={stack.url} target="_blank">
+                <Link
+                  href={{
+                    pathname: stack.url,
+                  }}
+                  target="_blank"
+                >
                   {stack.name}
                 </Link>
               </Badge>
