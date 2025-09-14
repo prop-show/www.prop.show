@@ -2,20 +2,19 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   typedRoutes: true,
-  /* config options here */
+
   images: {
-    remotePatterns: [new URL('https://bitmc.uno/picgo/126662463_p2.jpg')]
+    remotePatterns: [
+      { protocol: 'https', hostname: 'bitmc.uno', port: '', pathname: '/picgo/**', }
+    ]
   },
-  // 启用实验性功能
+
   experimental: {
-    // 优化字体加载
     optimizePackageImports: ['lucide-react', '@tabler/icons-react'],
   },
-  // 压缩和优化
-  compress: true,
-  // 生成 sitemap
-  // 静态导出优化
-  trailingSlash: false,
+
+  trailingSlash: true,
+
   // 安全头部
   async headers() {
     return [

@@ -15,11 +15,11 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/co
 
 const links: NavLink[] = [
   { href: "/", title: "首页", icon: <IconArmchair2 /> },
-  { href: "/shows", title: "节目单", icon: <IconBroadcast /> },
+  // { href: "/shows", title: "节目单", icon: <IconBroadcast /> },
   { href: "/videos", title: "视频", icon: <IconDeviceTv /> },
-  { href: "/news", title: "新闻", icon: <IconNews /> },
+  // { href: "/news", title: "新闻", icon: <IconNews /> },
   { href: "/about", title: "关于我们", icon: <IconBrandAsana /> },
-  { href: "/qa", title: "来信", icon: <IconMailbox /> },
+  // { href: "/qa", title: "来信", icon: <IconMailbox /> },
 ]
 
 export default function Header() {
