@@ -10,8 +10,9 @@ import {
 import Link from "next/link"
 import { Logo } from "./logo"
 import NavLinkButton, { NavLink } from "./NavLinkButton"
+import { ModeToggle } from "@/components/mode-toggle"
 
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, SheetFooter } from "@/components/ui/sheet"
 
 const links: NavLink[] = [
   { href: "/", title: "首页", icon: <IconArmchair2 /> },
@@ -35,10 +36,11 @@ export default function Header() {
         </section>
       </Link>
 
-      <aside className="justify-end flex-1 hidden md:flex">
+      <aside className="justify-end flex-1 hidden md:flex space-x-1">
         {links.map(({ href, icon, title }) => (
           <NavLinkButton key={href} href={href} title={title} icon={icon} />
         ))}
+        <ModeToggle />
       </aside>
 
       <aside className="block md:hidden">
@@ -60,11 +62,14 @@ export default function Header() {
                 </Link>
               </SheetTitle>
             </SheetHeader>
-            <main className="mx-2 flex flex-col items-start">
+            <main className="mx-2 flex flex-col items-start space-y-1">
               {links.map(({ href, title, icon }) => (
                 <NavLinkButton className="justify-start w-full" key={href} href={href} title={title} icon={icon} />
               ))}
             </main>
+            <SheetFooter>
+              <ModeToggle />
+            </SheetFooter>
           </SheetContent>
         </Sheet>
       </aside>

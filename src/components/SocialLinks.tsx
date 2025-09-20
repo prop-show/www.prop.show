@@ -5,7 +5,7 @@ import { Alert, AlertDescription, AlertTitle } from "./ui/alert"
 const socials: { href: string; platform: string; icon: React.ReactNode }[] = [
   { href: "https://github.com/prop-show", platform: "GitHub", icon: <IconBrandGithub /> },
   { href: "https://space.bilibili.com/104376935", platform: "哔哩哔哩", icon: <IconBrandBilibili /> },
-  { href: "https://www.youtube.com/@Whbbit1999", platform: "YouTube", icon: <IconBrandYoutube /> },
+  { href: "https://www.youtube.com/@PropShowFM", platform: "YouTube", icon: <IconBrandYoutube /> },
 
   // { href: "https://space.bilibili.com/104376935", platform: "抖音", icon: <IconBrandTiktok /> },
 ]

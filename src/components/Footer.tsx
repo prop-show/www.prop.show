@@ -24,7 +24,7 @@ const socialLinks = [
   },
   {
     name: "YouTube",
-    href: "https://www.youtube.com/@Whbbit1999",
+    href: "https://www.youtube.com/@PropShowFM",
     icon: <IconBrandYoutube className="w-5 h-5" />,
   },
 ]

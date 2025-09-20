@@ -41,13 +41,7 @@ export function PlatformButtons({ platforms }: PlatformButtonsProps) {
         {availablePlatforms.map(([platform, url]) => {
           const info = platformInfo[platform as VideoPlatform]
           return (
-            <Button
-              key={platform}
-              size="sm"
-              variant={"outline"}
-              className={` text-white flex items-center gap-2`}
-              asChild
-            >
+            <Button key={platform} size="sm" variant={"outline"} className={`flex items-center gap-2`} asChild>
               <Link
                 href={{
                   pathname: url,

@@ -111,23 +111,23 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="zh-CN" className="dark" style={{ colorScheme: "dark" }}>
+    <html lang="zh-CN" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Analytics />
-        <div className="fixed top-0 left-0 w-screen h-screen -z-10">
-          <DotGrid
-            dotSize={5}
-            gap={15}
-            baseColor="#ffffFF20"
-            activeColor="#ffffff90"
-            proximity={60}
-            shockRadius={250}
-            shockStrength={5}
-            resistance={750}
-            returnDuration={1.5}
-          />
-        </div>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <div className="fixed top-0 left-0 w-screen h-screen -z-10">
+            <DotGrid
+              dotSize={5}
+              gap={15}
+              baseColor="#ffffFF20"
+              activeColor="#ffffff90"
+              proximity={60}
+              shockRadius={250}
+              shockStrength={5}
+              resistance={750}
+              returnDuration={1.5}
+            />
+          </div>
           <main className="container mx-auto ">
             <Header />
 
