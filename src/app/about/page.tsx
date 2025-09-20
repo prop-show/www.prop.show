@@ -6,7 +6,7 @@ import SectionTitle from "@/components/SectionTitle"
 import type { Metadata } from "next"
 import OurMission from "./components/our-mission"
 import Stack from "./components/stack"
-import Concat from "./components/concat"
+// import Concat from "./components/concat"
 
 export const metadata: Metadata = {
   title: "关于我们 - prop.show",

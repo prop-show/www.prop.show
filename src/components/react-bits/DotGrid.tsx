@@ -6,16 +6,16 @@ import React, { useRef, useEffect, useCallback, useMemo } from "react"
 
 // gsap.registerPlugin(InertiaPlugin)
 
-const throttle = (func: (...args: any[]) => void, limit: number) => {
-  let lastCall = 0
-  return function (this: unknown, ...args: any[]) {
-    const now = performance.now()
-    if (now - lastCall >= limit) {
-      lastCall = now
-      func.apply(this, args)
-    }
-  }
-}
+// const throttle = (func: (...args: any[]) => void, limit: number) => {
+//   let lastCall = 0
+//   return function (this: unknown, ...args: any[]) {
+//     const now = performance.now()
+//     if (now - lastCall >= limit) {
+//       lastCall = now
+//       func.apply(this, args)
+//     }
+//   }
+// }
 
 interface Dot {
   cx: number
@@ -57,9 +57,7 @@ const DotGrid: React.FC<DotGridProps> = ({
   baseColor = "#5227FF",
   activeColor = "#5227FF",
   proximity = 150,
-  speedTrigger = 100,
   shockRadius = 250,
-  shockStrength = 5,
   maxSpeed = 5000,
   resistance = 750,
   returnDuration = 1.5,
@@ -137,7 +135,7 @@ const DotGrid: React.FC<DotGridProps> = ({
         const ox = dot.cx + dot.xOffset
         const oy = dot.cy + dot.yOffset
 
-        let style = baseColor
+        const style = baseColor
 
         ctx.save()
         ctx.translate(ox, oy)
