@@ -7,6 +7,11 @@ const creators: CreatorProp[] = [
     creator: "Whbbit1999",
     href: "https://github.com/Whbbit1999",
   },
+  {
+    avatar: "https://bitmc.uno/picgo/Himavanta.jpeg",
+    creator: "Himavanta",
+    href: "https://github.com/himavanta",
+  },
 ]
 
 export default function Creators() {
